@@ -13,7 +13,7 @@ const runCommand = command=>{
 }
 
 const repoName = process.argv[2];
-const gitCheckoutCommand = `git clone --depth 1 https://github.com/Romeo-Giorgio/create-ts-mariadb-api.git ${repoName}`;
+const gitCheckoutCommand = `git clone --depth 1 https://github.com/Romeo-Giorgio/create-express-ts-mariadb-api.git ${repoName}`;
 const installDepsCommand = `cd ${repoName} && npm install`;
 
 console.log(`Cloning rerpository with name ${repoName}`);

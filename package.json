@@ -1,6 +1,6 @@
 {
   "name": "@romgio/create-express-ts-mariadb-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Starter for an Express Typescript API with MariaDB",
   "bin": "./bin/cli.js",
   "main": "src/index.ts",
