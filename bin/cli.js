@@ -15,8 +15,8 @@ const runCommand = command=>{
 const repoName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/Romeo-Giorgio/create-express-ts-mariadb-api.git ${repoName}`;
 const installDepsCommand = `cd ${repoName} && npm install`;
-const deleteGitCommand = `rm -rf .git`;
-const setProjectSettings = `node -e "let pkg=require('./package.json'); pkg.name='${repoName}'; pkg.version='1.0.0'; pkg.author=''; pkg.repository=undefined; pkg.description=''; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"`
+const deleteGitCommand = `cd ${repoName} && rm -rf .git`;
+const setProjectSettings = `cd ${repoName} && node -e "let pkg=require('./package.json'); pkg.name='${repoName}'; pkg.version='1.0.0'; pkg.author=''; pkg.repository=undefined; pkg.description=''; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"`
 
 console.log(`Cloning repository with name ${repoName}`);
 const checkedOut = runCommand(gitCheckoutCommand);
